@@ -1,136 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hi, I'm PARTH KAKLOTAR</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      background: radial-gradient(circle at 35% 50%, #26326e 0%, #0e1526 100%);
-      color: #f3f6fd;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-    .hero-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      gap: 48px;
-      flex-wrap: wrap;
-    }
-    .profile-img-container {
-      background: radial-gradient(circle at 60% 35%, #4754d3 45%, #222c5c 80%);
-      border-radius: 50%;
-      padding: 12px;
-      width: 340px;
-      height: 340px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 24px rgba(32,42,73,0.50);
-    }
-    .profile-img {
-      width: 310px;
-      height: 310px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 2px solid #888ed2;
-      box-shadow: 0 4px 20px #28305880;
-    }
-    .hero-content {
-      max-width: 600px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-    .hero-content h1 {
-      font-size: 3em;
-      margin: 0;
-      font-weight: bold;
-      letter-spacing: 0.01em;
-      color: #fff;
-    }
-    .hero-content h1 strong {
-      color: #756bf3;
-      text-decoration: underline;
-      text-decoration-color: #554ec7;
-    }
-    .subtitle {
-      font-size: 1.4em;
-      color: #8ca2ff;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-    .hero-content p {
-      font-size: 1.2em;
-      color: #f4f5fa;
-    }
-    .button-row {
-      display: flex;
-      gap: 28px;
-      margin-top: 12px;
-    }
-    .hero-button {
-      font-size: 1.14em;
-      padding: 12px 32px;
-      border-radius: 8px;
-      border: none;
-      background: #756bf3;
-      color: white;
-      font-weight: 600;
-      box-shadow: 0 3px 16px #1e1e4670;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-    }
-    .hero-button.secondary {
-      background: transparent;
-      color: #8ca2ff;
-      border: 2px solid #756bf3;
-    }
-    .hero-button:hover {
-      background: #554ec7;
-      color: #fff;
-    }
-    .hero-button.secondary:hover {
-      background: #756bf3;
-      color: #fff;
-    }
-    @media (max-width: 1020px) {
-      .hero-container { flex-wrap: wrap; gap: 16px; }
-      .profile-img-container { width: 220px; height: 220px; }
-      .profile-img { width: 190px; height: 190px; }
-      .hero-content { max-width: 390px; }
-      .hero-content h1 { font-size: 2em; }
-    }
-     @media (max-width: 700px) {
-      .hero-container { flex-direction: column; gap: 0; min-height: 80vh; }
-      .hero-content { align-items: center; }
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Parth Kaklotar — Portfolio</title>
+  <meta name="description" content="Portfolio of Parth Kaklotar — Web developer, projects and contact."/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="hero-container">
-    <!-- Left: Your image in circle style -->
-    <div class="profile-img-container">
-      <img class="profile-img" src="image.jpg" alt="Parth Kaklotar profile">
-    </div>
-    <!-- Right: Hero text -->
-    <div class="hero-content">
-      <h1>Hi, I'm <strong>PARTH KAKLOTAR</strong></h1>
-      <div class="subtitle">
-        Full-Stack Developer | ML Engineer | AI Enthusiast
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <a href="#" class="brand-name">Parth <span class="last">Kaklotar</span></a>
       </div>
-      <p>
-        Welcome to my portfolio! I'm passionate about building elegant solutions to complex problems. With expertise in web development and a keen eye for design, I create digital experiences that make a difference.
-      </p>
-      <div class="button-row">
-        <a href="#projects"><button class="hero-button">View My Work</button></a>
-        <a href="#contact"><button class="hero-button secondary">Get In Touch</button></a>
-      </div>
+      <nav class="mainnav">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero wrap">
+      <div class="hero-left">
+        <h1>Hi, I'm <strong>Parth Kaklotar</strong></h1>
+        <p class="subtitle">Web Developer • Student • Frontend enthusiast</p>
+        <p class="lead">I build responsive websites and small web apps using HTML, CSS and JavaScript. Here are some projects I made.</p>
+        <p class="hero-cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </p>
+      </div>
+      <div class="hero-right">
+        <!-- Put your profile photo in images/profile.jpg -->
+        <img src="images/profile.jpg" alt="Parth Kaklotar" class="profile">
+      </div>
+    </section>
+
+    <section id="skills" class="section wrap">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Responsive Design</div>
+      </div>
+    </section>
+
+    <section id="projects" class="section wrap alt">
+      <h2>Projects</h2>
+      <p class="section-note">Click a project to open live demo or code (replace links below with yours).</p>
+      <div class="projects-grid">
+        <!-- Project card example — copy / duplicate for more -->
+        <article class="project">
+          <a href="#" target="_blank" rel="noopener">
+            <img src="images/proj1.png" alt="Project 1 screenshot">
+          </a>
+          <div class="proj-body">
+            <h3>Portfolio Website</h3>
+            <p class="proj-desc">A modern portfolio built with HTML & CSS. Responsive and fast.</p>
+            <p class="proj-meta">Tech: HTML • CSS • JS</p>
+            <p class="proj-links"><a href="#" target="_blank">Live</a> • <a href="#" target="_blank">Code</a></p>
+          </div>
+        </article>
+
+        <article class="project">
+          <a href="#" target="_blank" rel="noopener">
+            <img src="images/proj2.png" alt="Project 2 screenshot">
+          </a>
+          <div class="proj-body">
+            <h3>Task Manager</h3>
+            <p class="proj-desc">Small task app using DOM and localStorage to save tasks.</p>
+            <p class="proj-meta">Tech: JavaScript • HTML • CSS</p>
+            <p class="proj-links"><a href="#" target="_blank">Live</a> • <a href="#" target="_blank">Code</a></p>
+          </div>
+        </article>
+        <!-- add more project articles as needed -->
+      </div>
+    </section>
+
+    <section id="about" class="section wrap">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p><strong>Parth Kaklotar</strong> — Computer Engineering student and web developer. I enjoy building accessible user interfaces and learning modern front-end tools.</p>
+          <p>Education: Computer Engineering (Student). Location: India.</p>
+          <p><a class="btn" href="resume.pdf" target="_blank">Download Resume</a></p>
+        </div>
+        <aside class="about-aside">
+          <p><strong>Email</strong></p>
+          <p><a href="mailto:parthkaklotar544@gmail.com">parthkaklotar544@gmail.com</a></p>
+          <p><strong>GitHub</strong></p>
+          <p><a href="https://github.com/parthkp126" target="_blank">github.com/parthkp126</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="section wrap alt">
+      <h2>Contact</h2>
+      <p class="section-note">Send me a short message</p>
+      <form class="contact-form" onsubmit="alert('This form is a demo. Configure Formspree or Netlify for real messages.'); return false;">
+        <label>
+          Name
+          <input type="text" name="name" required placeholder="Your name">
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required placeholder="you@example.com">
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" required placeholder="Write your message..."></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>© <span id="year"></span> Parth Kaklotar — Built with HTML &amp; CSS</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
