@@ -6,104 +6,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      background: #f7faff;
+      background: radial-gradient(circle at 35% 50%, #26326e 0%, #0e1526 100%);
+      color: #f3f6fd;
       font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      color: #222;
+      min-height: 100vh;
     }
-    .main-container {
-      max-width: 800px;
-      margin: 44px auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-      padding: 38px;
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 48px;
+      flex-wrap: wrap;
     }
-    h1 {
-      font-size: 2.6em;
-      color: #2e7be4;
-      margin-bottom: 10px;
+    .profile-img-container {
+      background: radial-gradient(circle at 60% 35%, #4754d3 45%, #222c5c 80%);
+      border-radius: 50%;
+      padding: 12px;
+      width: 340px;
+      height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(32,42,73,0.50);
+    }
+    .profile-img {
+      width: 310px;
+      height: 310px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #888ed2;
+      box-shadow: 0 4px 20px #28305880;
+    }
+    .hero-content {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .hero-content h1 {
+      font-size: 3em;
+      margin: 0;
       font-weight: bold;
+      letter-spacing: 0.01em;
+    }
+    .hero-content h1 strong {
+      color: #756bf3;
+      text-decoration: underline;
+      text-decoration-color: #554ec7;
     }
     .subtitle {
-      font-size: 1.15em;
-      color: #222;
-      margin-bottom: 18px;
+      font-size: 1.4em;
+      color: #8ca2ff;
+      font-weight: 600;
+      margin-bottom: 12px;
     }
-    section {
-      margin-bottom: 32px;
+    .hero-content p {
+      font-size: 1.2em;
+      color: #f4f5fa;
     }
-    ul {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      padding-left: 18px;
+    .button-row {
+      display: flex;
+      gap: 28px;
+      margin-top: 12px;
     }
-    .skills-list li {
-      margin-bottom: 6px;
+    .hero-button {
+      font-size: 1.14em;
+      padding: 12px 32px;
+      border-radius: 8px;
+      border: none;
+      background: #756bf3;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 3px 16px #1e1e4670;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
     }
-    footer {
-      color: #999;
-      font-size: 1em;
-      margin-top: 48px;
-      text-align: center;
+    .hero-button.secondary {
+      background: transparent;
+      color: #8ca2ff;
+      border: 2px solid #756bf3;
     }
-    @media (max-width: 900px) {
-      .main-container { padding: 16px; }
-      h1 { font-size: 2em; }
+    .hero-button:hover {
+      background: #554ec7;
+      color: #fff;
+    }
+    .hero-button.secondary:hover {
+      background: #756bf3;
+      color: #fff;
+    }
+    @media (max-width: 1020px) {
+      .hero-container { flex-wrap: wrap; gap: 16px; }
+      .profile-img-container { width: 220px; height: 220px; }
+      .profile-img { width: 190px; height: 190px; }
+      .hero-content { max-width: 390px; }
+      .hero-content h1 { font-size: 2em; }
+    }
+     @media (max-width: 700px) {
+      .hero-container { flex-direction: column; gap: 0; min-height: 80vh; }
+      .hero-content { align-items: center; }
     }
   </style>
 </head>
 <body>
-  <div class="main-container">
-    <h1>Hi, I'm PARTH KAKLOTAR</h1>
-    <div class="subtitle">Full-Stack Developer | ML Engineer | AI Enthusiast</div>
-    <section>
-      <h2>Welcome to my portfolio!</h2>
+  <div class="hero-container">
+    <!-- Left: Image -->
+    <div class="profile-img-container">
+      <img class="profile-img" src="image.jpg" alt="Parth Kaklotar profile">
+    </div>
+    <!-- Right: Content -->
+    <div class="hero-content">
+      <h1>Hi, I'm <strong>PARTH KAKLOTAR</strong></h1>
+      <div class="subtitle">
+        Full-Stack Developer | ML Engineer | AI Enthusiast
+      </div>
       <p>
-        I'm passionate about building elegant solutions to complex problems. With expertise in web development and a keen eye for design, I create digital experiences that make a difference.<br>
-        <ul>
-          <li>Building responsive and dynamic websites using modern technologies</li>
-          <li>Creating intuitive and visually appealing user interfaces</li>
-          <li>Developing efficient solutions to complex technical challenges</li>
-        </ul>
+        Welcome to my portfolio! I'm passionate about building elegant solutions to complex problems. With expertise in web development and a keen eye for design, I create digital experiences that make a difference.
       </p>
-    </section>
-    <section>
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>HTML, CSS, JavaScript</li>
-        <li>React, Node.js, MongoDB</li>
-        <li>Python, Machine Learning</li>
-        <li>Git &amp; GitHub</li>
-        <li>UI/UX Design</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Portfolio Website</strong>: Personal website showcasing projects and technical skills.
-        </li>
-        <li>
-          <strong>Weather App</strong>: Real-time weather data using public APIs and modern JavaScript.
-        </li>
-        <li>
-          <strong>ML Project</strong>: Analyzing datasets and building predictive models with Python.
-        </li>
-        <!-- Add more projects here -->
-      </ul>
-    </section>
-    <section>
-      <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:parthkaklotar544@gmail.com">parthkaklotar544@gmail.com</a><br>
-        GitHub: <a href="https://github.com/parthkp126" target="_blank">github.com/parthkp126</a>
-      </p>
-    </section>
-    <footer>
-      &copy; 2025 Parth Kaklotar
-    </footer>
+      <div class="button-row">
+        <a href="#projects"><button class="hero-button">View My Work</button></a>
+        <a href="#contact"><button class="hero-button secondary">Get In Touch</button></a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
