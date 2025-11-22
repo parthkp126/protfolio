@@ -62,7 +62,7 @@
 
   <section id="contact" class="section contact">
     <h2>Contact</h2>
-    <p>Email: yourmail@example.com</p>
+    <p>Email: parthkaklotar544@gmail.com</p>
     <p>GitHub: github.com/parthkp126</p>
   </section>
 
