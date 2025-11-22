@@ -51,6 +51,7 @@
       margin: 0;
       font-weight: bold;
       letter-spacing: 0.01em;
+      color: #fff;
     }
     .hero-content h1 strong {
       color: #756bf3;
@@ -112,11 +113,11 @@
 </head>
 <body>
   <div class="hero-container">
-    <!-- Left: Image -->
+    <!-- Left: Your image in circle style -->
     <div class="profile-img-container">
       <img class="profile-img" src="image.jpg" alt="Parth Kaklotar profile">
     </div>
-    <!-- Right: Content -->
+    <!-- Right: Hero text -->
     <div class="hero-content">
       <h1>Hi, I'm <strong>PARTH KAKLOTAR</strong></h1>
       <div class="subtitle">
